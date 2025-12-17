@@ -85,14 +85,8 @@ GRANT CREATE AGENT ON SCHEMA MARKETING_CAMPAIGNS_DB.TEST TO ROLE AGENT_EVAL_ROLE
 -- SECTION 3: CREATE GIT INTEGRATION (for loading CSV files from repo)
 -- ============================================================================
 
-USE ROLE ACCOUNTADMIN;
-
+-- Use new role
 USE ROLE AGENT_EVAL_ROLE;
-
-SHOW TABLES IN SCHEMA MARKETING_CAMPAIGNS_DB.TEST;
-
-
-
 
 -- Create API integration for GitHub (public repo, no secrets needed)
 CREATE API INTEGRATION IF NOT EXISTS GIT_API_INTEGRATION_AGENT_EVAL_QUICKSTART
